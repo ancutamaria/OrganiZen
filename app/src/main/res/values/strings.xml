@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">OrganiZen</string>
+    <string name="quote_of_the_day">The little things? The little moments? They aren’t little. - Jon Kabat-Zinn</string>
+    <string name="shopping_list">Shopping list</string>
+    <string name="mood_board">Mood board</string>
+    <string name="habits_tracking">Habits tracking</string>
+    <string name="weekly_monthly_planner">Weekly/ Monthly planner</string>
+    <string name="bucket_list">Bucket list</string>
 </resources>
