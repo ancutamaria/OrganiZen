@@ -4,23 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/brown"
+    tools:context="com.amg.organizen.MainActivity"
+    android:background="@color/orange"
     android:padding="3dp"
     android:paddingTop="50dp">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/quoteOfTheDay"
+        android:id="@+id/read_only_mc"
         app:shapeAppearanceOverlay="@style/MaterialCardViewCut"
         android:theme="?attr/materialButtonOutlinedStyle"
-        android:backgroundTint="@color/purple"
+        android:backgroundTint="@color/orange_light"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/read_only">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/under_construction"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.20"/>
+            <TextView
+                style="@style/MainScreenCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/read_only"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.80"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/quote_of_the_day_mc"
+        app:shapeAppearanceOverlay="@style/MaterialCardViewCut"
+        android:theme="?attr/materialButtonOutlinedStyle"
+        android:backgroundTint="@color/orange_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/read_only_mc" >
         <TextView
+            android:id="@+id/quote_of_the_day"
             style="@style/MainScreenCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,18 +74,19 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/textView1"
+        android:id="@+id/shopping_list_mc"
         app:shapeAppearanceOverlay="@style/MaterialCardViewCut"
         android:theme="?attr/materialButtonOutlinedStyle"
-        android:backgroundTint="@color/purple"
+        android:backgroundTint="@color/orange_light"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:layout_constraintWidth_percent="0.45"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quoteOfTheDay">
+        app:layout_constraintTop_toBottomOf="@+id/quote_of_the_day_mc">
         <TextView
+            android:id="@+id/shopping_list"
             style="@style/MainScreenCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,19 +94,20 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/textView2"
+        android:id="@+id/bucket_list_mc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:shapeAppearanceOverlay="@style/MaterialCardViewCut"
         android:theme="?attr/materialButtonOutlinedStyle"
-        android:backgroundTint="@color/purple"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        android:backgroundTint="@color/orange_light"
+        app:layout_constraintBottom_toTopOf="@+id/weekly_monthly_planner_mc"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/quoteOfTheDay"
+        app:layout_constraintStart_toEndOf="@+id/shopping_list_mc"
+        app:layout_constraintTop_toBottomOf="@+id/quote_of_the_day_mc"
         app:layout_constraintWidth_percent="0.45">
         <TextView
+            android:id="@+id/bucket_list"
             style="@style/MainScreenCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -74,36 +115,66 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/textView3"
+        android:id="@+id/weekly_monthly_planner_mc"
         app:shapeAppearanceOverlay="@style/MaterialCardViewCut"
         android:theme="?attr/materialButtonOutlinedStyle"
-        android:backgroundTint="@color/purple"
+        android:backgroundTint="@color/orange_light"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/bucket_list_mc">
         <TextView
+            android:id="@+id/weekly_monthly_planner"
             style="@style/MainScreenCard"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/weekly_monthly_planner" />
     </com.google.android.material.card.MaterialCardView>
 
-
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/textView4"
+        android:id="@+id/reading_list_mc"
         app:shapeAppearanceOverlay="@style/MaterialCardViewCut"
         android:theme="?attr/materialButtonOutlinedStyle"
-        android:backgroundTint="@color/purple"
+        android:backgroundTint="@color/orange_light"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
+        app:layout_constraintTop_toBottomOf="@+id/weekly_monthly_planner_mc">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/reading_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/reading_list" >
+            <TextView
+                android:id="@+id/reading_list_tv"
+                style="@style/MainScreenCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reading_list"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mood_board_mc"
+        app:shapeAppearanceOverlay="@style/MaterialCardViewCut"
+        android:theme="?attr/materialButtonOutlinedStyle"
+        android:backgroundTint="@color/orange_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reading_list_mc">
         <TextView
+            android:id="@+id/mood_board"
             style="@style/MainScreenCard"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -112,17 +183,18 @@
 
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/textView5"
+        android:id="@+id/habits_tracking_mc"
         app:shapeAppearanceOverlay="@style/MaterialCardViewCut"
         android:theme="?attr/materialButtonOutlinedStyle"
-        android:backgroundTint="@color/purple"
+        android:backgroundTint="@color/orange_light"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
+        app:layout_constraintTop_toBottomOf="@+id/mood_board_mc">
         <TextView
+            android:id="@+id/habits_tracking"
             style="@style/MainScreenCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

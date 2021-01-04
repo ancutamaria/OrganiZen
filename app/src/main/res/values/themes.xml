@@ -1,21 +1,21 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.OrganiZen" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <item name="colorPrimary">@color/brown</item>
-        <item name="colorPrimaryVariant">@color/brown</item>
-        <item name="colorOnPrimary">@color/coral_light</item>
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryVariant">@color/orange</item>
+        <item name="colorOnPrimary">@color/white</item>
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
     </style>
 
     <style name="MainScreenCard" parent="ShapeAppearance.MaterialComponents.MediumComponent">
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">20dp</item>
-        <item name="android:textColor">@color/coral_light</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:paddingLeft">20dp</item>
         <item name="android:paddingRight">20dp</item>
         <item name="android:paddingTop">30dp</item>
         <item name="android:paddingBottom">30dp</item>
-        <item name="android:background">@color/purple</item>
+        <item name="android:background">@color/orange_light</item>
     </style>
 
     <style name="MaterialCardViewCut" parent="">

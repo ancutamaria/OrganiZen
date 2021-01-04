@@ -4,7 +4,6 @@
     <color name="gray_medium">#484848</color>
     <color name="gray_dark">#282828</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="purple">#e08f62</color>
-    <color name="coral_light">#ffffff</color>
-    <color name="brown">#cc7351</color>
+    <color name="orange_light">#e08f62</color>
+    <color name="orange">#cc7351</color>
 </resources>

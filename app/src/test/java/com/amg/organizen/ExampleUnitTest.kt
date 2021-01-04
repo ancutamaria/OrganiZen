@@ -1,4 +1,4 @@
-package com.am.organizen
+package com.amg.organizen
 
 import org.junit.Test
 
