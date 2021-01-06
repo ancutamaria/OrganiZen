@@ -11,7 +11,6 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.amg.organizen.model.Book
-import kotlin.concurrent.timerTask
 
 private const val TAG = "BooksActivity"
 
@@ -40,7 +39,7 @@ class BookListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.book_list_fragment, container, false)
-        bookRecyclerView = view.findViewById(R.id.book_recycler_view)
+        bookRecyclerView = view.findViewById(R.id.book_list_recycler_view)
         bookRecyclerView.layoutManager = LinearLayoutManager(context)
 
         updateUI()
