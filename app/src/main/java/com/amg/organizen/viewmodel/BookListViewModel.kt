@@ -1,7 +1,7 @@
-package com.amg.organizen
+package com.amg.organizen.viewmodel
 
 import androidx.lifecycle.ViewModel
-import com.amg.organizen.model.Book
+import com.amg.organizen.model.data.Book
 
 class BookListViewModel: ViewModel() {
 

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">OrganiZen</string>
-    <string name="read_only">The app is still mostly readonly, in dev progress.</string>
+    <string name="read_only">The app is mostly under construction.</string>
     <string name="quote_of_the_day">The little things? The little moments? They aren’t little. - Jon Kabat-Zinn</string>
     <string name="shopping_list">Shopping list</string>
     <string name="mood_board">Mood board</string>
@@ -8,6 +8,5 @@
     <string name="weekly_monthly_planner">Weekly/ Monthly planner</string>
     <string name="bucket_list">Bucket list</string>
     <string name="reading_list">Reading list</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

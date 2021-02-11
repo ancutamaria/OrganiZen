@@ -1,4 +1,4 @@
-package com.amg.organizen.model
+package com.amg.organizen.model.data
 
 import java.util.*
 

@@ -1,7 +1,8 @@
-package com.amg.organizen
+package com.amg.organizen.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.amg.organizen.R
 
 class ShoppingListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

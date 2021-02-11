@@ -1,7 +1,7 @@
-package com.amg.organizen
+package com.amg.organizen.viewmodel
 
 import androidx.lifecycle.ViewModel
-import com.amg.organizen.model.ShoppingItem
+import com.amg.organizen.model.data.ShoppingItem
 
 class ShoppingListViewModel: ViewModel() {
 

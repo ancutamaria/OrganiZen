@@ -1,4 +1,4 @@
-package com.amg.organizen
+package com.amg.organizen.view
 
 import android.os.Bundle
 import android.util.Log
@@ -10,7 +10,9 @@ import android.widget.TextView
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.amg.organizen.model.Book
+import com.amg.organizen.viewmodel.BookListViewModel
+import com.amg.organizen.R
+import com.amg.organizen.model.data.Book
 
 private const val TAG = "BooksActivity"
 

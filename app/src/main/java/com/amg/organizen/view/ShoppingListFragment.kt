@@ -1,4 +1,4 @@
-package com.amg.organizen
+package com.amg.organizen.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,14 +9,16 @@ import android.widget.TextView
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.amg.organizen.model.ShoppingItem
+import com.amg.organizen.R
+import com.amg.organizen.viewmodel.ShoppingListViewModel
+import com.amg.organizen.model.data.ShoppingItem
 
 private const val TAG = "ShoppingListFragment"
 
 class ShoppingListFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
-    private var adapter: ShoppingListFragment.ShoppingListAdapter? = null
+    private var adapter: ShoppingListAdapter? = null
 
     companion object {
         @JvmStatic
