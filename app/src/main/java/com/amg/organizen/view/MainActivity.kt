@@ -45,8 +45,8 @@ class MainActivity : AppCompatActivity() {
                 }
     }
 
-    private fun updateUI(msg: Quotes){
-        var quote = msg.quotes?.shuffled()?.take(1)?.get(0)
+    private fun updateUI(msg: List<Quote>){
+        var quote = msg.shuffled()?.take(1)?.get(0)
         quoteOfTheDay.text = quote?.quote + " - " + quote?.author
     }
 }
