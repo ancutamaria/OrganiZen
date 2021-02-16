@@ -16,6 +16,6 @@ class MyRepository @Inject constructor(
         if (quotes.isEmpty()){
             quoteDao.addQuotes(apiService.getQuotes().quotes)
         }
-        emit(quoteDao.getQuotes())
+        emit(quoteDao.getQuotes().filter { quote -> quote.author.isNotEmpty() })
     }.flowOn(Dispatchers.IO)
 }

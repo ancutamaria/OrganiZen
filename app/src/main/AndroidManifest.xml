@@ -14,7 +14,7 @@
         android:theme="@style/Theme.OrganiZen">
         <activity android:name=".view.ShoppingListActivity"></activity>
         <activity
-            android:name=".view.BooksActivity"
+            android:name=".view.QuotesActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".view.MainActivity"
