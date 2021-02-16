@@ -8,6 +8,6 @@ import retrofit2.http.GET
 interface MyAPIService {
 
     @GET("/b/01MF")
-    fun getQuotes(): Call<Quotes>
+    suspend fun getQuotes(): Quotes
 
 }

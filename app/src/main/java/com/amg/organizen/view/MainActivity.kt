@@ -41,24 +41,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewModel.quotes.observe(this){ response ->
-            when (response) {
-                is MyResponse.OK -> {
-                    updateUI(response)
+            updateUI(response)
                 }
-                is MyResponse.Error -> {
-                    AlertDialog.Builder(this)
-                        .setMessage(response.message)
-                        .setPositiveButton("OK") { _,_ -> }
-                        .create()
-                        .show()
-                }
-            }
-
-        }
     }
 
-    private fun updateUI(msg: MyResponse.OK<Quotes>){
-        var quote = msg.data?.quotes?.shuffled()?.take(1)?.get(0)
+    private fun updateUI(msg: Quotes){
+        var quote = msg.quotes?.shuffled()?.take(1)?.get(0)
         quoteOfTheDay.text = quote?.quote + " - " + quote?.author
     }
 }
